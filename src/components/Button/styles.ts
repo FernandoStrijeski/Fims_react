@@ -37,4 +37,14 @@ export const Container = styled.button<IContainerProps>`
       border-color: ${({ theme }) => theme.colors.primary[500]};
     }
   }
+  &.${ButtonVariants.Tertiary} {
+    background: ${({ theme }) => theme.colors.tertiary[500]};
+    border: 2px solid ${({ theme }) => theme.colors.tertiary[300]};
+    color: ${({ theme }) => theme.colors.tertiary[300]};
+    &:hover {
+      color: ${({ theme }) => theme.colors.white};
+      background: ${({ theme }) => theme.colors.tertiary[300]};
+      border-color: ${({ theme }) => theme.colors.tertiary[300]};
+    }
+  }
 `
