@@ -5,11 +5,19 @@ import { Button } from "../Button";
 import * as Styles from "./styles";
 import { Link } from "../Link";
 import { ButtonVariants } from "../Button/types";
+import { FormEvent, useState } from "react";
 
 export function Header() {
   const navigate = useNavigate();
-  const handleSubmit = () => {
-    navigate("/search?keyword=test");
+
+  const [search, setSearch] = useState("");
+
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+
+    if (search) {
+      navigate(`/search?keyword=${search}`);
+    }
   };
 
   return (
@@ -40,7 +48,12 @@ export function Header() {
       </Button>
 
       <form className="search-wrapper" onSubmit={handleSubmit}>
-        <input type="text" placeholder="Pesquise um filme" />
+        <input
+          type="text"
+          placeholder="Pesquise um filme"
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+        />
 
         <Button style={{ borderRadius: "0 4px 4px 0" }} type="submit">
           Pesquisar
