@@ -30,9 +30,9 @@ export function Home() {
       });
   }, []);
 
-  // useEffect(() => {
-  //   console.log(top10WeeklyMovies);
-  // }, [top10WeeklyMovies]);
+  useEffect(() => {
+  //  console.log(top10WeeklyMovies);
+  }, [top10WeeklyMovies]);
 
   return (
     <Styles.Container>
