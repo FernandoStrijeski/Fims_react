@@ -16,7 +16,7 @@ export function WishList() {
           key={movie.id}
           movie={movie}
           inWishList={true}
-          handleAddMovieOnWishList={function (movie: IMovieProps): void {
+          handleAddOrRemoveMovieOnWishList={function (movie: IMovieProps): void {
             throw new Error("Function not implemented.");
           }}
         />

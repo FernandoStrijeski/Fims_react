@@ -9,7 +9,7 @@ const WishListContext = createContext({} as IWishListContextData);
 
 export function WishListProvider(props: IWishListProviderProps): JSX.Element {
   const [wishList, setWishList] = useState<IMovieProps[]>(() => {
-    return JSON.parse(localStorage.getItem("wishList") || "[]");
+    return JSON.parse(localStorage.getItem("wishlist") || "[]");
   });
 
   function isMovieInWishList(movieId: number): boolean {

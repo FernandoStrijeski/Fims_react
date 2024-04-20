@@ -49,7 +49,7 @@ export function MovieCard(props: IMovieCardProps) {
             <Button
               type="button"
               variant={ButtonVariants.Secondary}
-              onClick={() => props.handleAddMovieOnWishList(props.movie)}
+              onClick={() => props.handleAddOrRemoveMovieOnWishList(props.movie)}
             >
               {props.inWishList ? (
                 <>

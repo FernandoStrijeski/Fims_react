@@ -63,7 +63,7 @@ export function Home() {
                 key={movie.id}
                 movie={movie}
                 className="card"
-                handleAddMovieOnWishList={handleAddOrRemoveMovieOnWishList}
+                handleAddOrRemoveMovieOnWishList={handleAddOrRemoveMovieOnWishList}
                 inWishList={isMovieInWishList(movie.id)}
               />
             ))
