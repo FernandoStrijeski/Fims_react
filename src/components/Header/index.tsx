@@ -6,8 +6,11 @@ import * as Styles from "./styles";
 import { Link } from "../Link";
 import { ButtonVariants } from "../Button/types";
 import { FormEvent, useState } from "react";
+import { useWishList } from "../../hooks/WishList";
 
 export function Header() {
+  const { wishList } = useWishList();
+
   const navigate = useNavigate();
 
   const [search, setSearch] = useState("");
@@ -35,7 +38,7 @@ export function Header() {
         </Link>
         <Link to="/wishlist">
           <FaBars />
-          Minha lista
+          Minha lista ({wishList.length})
         </Link>
       </div>
 
