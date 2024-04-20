@@ -4,6 +4,7 @@ import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";
 import { Search } from "../pages/Search";
 import { Movie } from "../pages/Movie";
+import { WishList } from "../pages/WishList";
 
 export function AppRoutes() {
     return (
@@ -14,6 +15,7 @@ export function AppRoutes() {
             <Route path="/login" element={<Login />} />
             <Route path="/search" element={<Search />} />
             <Route path="/movie/:id" element={<Movie />} />
+            <Route path="/wishlist" element={<WishList />} />
         </Routes>
         </BrowserRouter>
 
