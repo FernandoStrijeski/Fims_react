@@ -14,12 +14,16 @@ import api from "../services/api";
 import * as Styles from "../styles/pages/Movie";
 
 import { Loading } from "../components/Loading";
+import { useWishList } from "../hooks/WishList";
 
 export function Movie() {
+  const { isMovieInWishList, handleAddOrRemoveMovieOnWishList } = useWishList();
   const { id } = useParams();
   const currentUrl = window.location.href;
 
-  const [movie, setMovie] = useState<IMovieRequestProps>();
+  const [movie, setMovie] = useState<IMovieRequestProps>(
+    {} as IMovieRequestProps
+  );
   const [isLoading, setIsLoading] = useState(true);
 
   const [isLinkCopiedToClipboard, setIsLinkCopiedToClipboard] = useState(false);
@@ -124,9 +128,22 @@ export function Movie() {
                   )}
                 </Button>
 
-                <Button type="button" variant={ButtonVariants.Secondary}>
-                  Adicionar à minha lista
-                  <FiPlus />
+                <Button
+                  type="button"
+                  variant={ButtonVariants.Secondary}
+                  onClick={() => handleAddOrRemoveMovieOnWishList(movie)}
+                >
+                  {isMovieInWishList(movie.id) ? (
+                    <>
+                    Em sua lista
+                    <FiCheck />
+                    </>
+                  ) : (
+                    <>
+                    Adicionar à minha lista
+                    <FiPlus />
+                    </>
+                  )}
                 </Button>
               </div>
             </footer>

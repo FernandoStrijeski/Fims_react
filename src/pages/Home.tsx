@@ -42,7 +42,7 @@ export function Home() {
     <Styles.Container>
       <section id="presentation">
         <div className="text-wrapper">
-          <h2>Bem vindo ao Films</h2>
+          <h2>Bem vindo ao Filmz</h2>
           <h1>O lugar perfeito para ter sempre um filme na manga!</h1>
 
           <p>

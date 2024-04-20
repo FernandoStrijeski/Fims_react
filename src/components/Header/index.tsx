@@ -26,7 +26,7 @@ export function Header() {
         <Link to="/">
           <img
             src={Logo}
-            alt="Logo de Films. Botão de play ao lado do texto 'Films'"
+            alt="Logo de Filmz. Botão de play ao lado do texto 'Filmz'"
           />
         </Link>
         <Link to="/">
