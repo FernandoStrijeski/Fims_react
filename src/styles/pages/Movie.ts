@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Container = styled.div`
   margin-top: 70px;
@@ -67,6 +67,10 @@ export const Container = styled.div`
         p {
           margin-top: 2rem;
         }
+        a {
+          text-decoration: none;
+          color: white;
+        }
       }
 
       footer {
@@ -94,4 +98,4 @@ export const Container = styled.div`
       }
     }
   }
-`
+`;

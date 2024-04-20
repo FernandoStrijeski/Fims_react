@@ -14,7 +14,6 @@ import api from "../services/api";
 import * as Styles from "../styles/pages/Movie";
 
 import { Loading } from "../components/Loading";
-import { Link } from "../components/Link";
 
 export function Movie() {
   const { id } = useParams();
@@ -63,14 +62,14 @@ export function Movie() {
         <section id="presentation">
           <div className="movie-poster-wrapper">
             {movie?.poster_path ? (
-              <Link to={movie?.homepage}>
+              <a href={movie?.homepage} target="blank">
                 <img
                   src={`${import.meta.env.VITE_THE_MOVIE_DB_IMAGES_URL}${
                     movie?.poster_path
                   }`}
                   alt={`Capa do filme ${movie?.title}`}
                 />
-              </Link>
+              </a>
             ) : (
               <>
                 <FiCameraOff />
@@ -81,9 +80,9 @@ export function Movie() {
 
           <div className="about">
             <div>
-              <Link to={movie?.homepage}>
+              <a href={movie?.homepage} target="blank">
                 <h1>{movie?.title}</h1>
-              </Link>
+              </a>
               <h4>
                 {movie?.genres
                   .map((genre) => genre.name)

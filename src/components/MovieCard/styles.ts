@@ -50,6 +50,10 @@ export const Container = styled.div`
       font-weight: 700;
     }
 
+    a {
+      text-decoration: none;
+      color: white;
+    }
     footer {
       width: 100%;
 

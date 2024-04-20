@@ -4,7 +4,6 @@ import { Button } from "../Button";
 import { ButtonVariants } from "../Button/types";
 import * as Styles from "./styles";
 import { IMovieCardProps } from "./types";
-import { Link } from "../Link";
 
 export function MovieCard(props: IMovieCardProps) {
   const navigate = useNavigate();
@@ -13,14 +12,14 @@ export function MovieCard(props: IMovieCardProps) {
     <Styles.Container {...props}>
       <div className="movie-poster-wrapper">
         {props.movie.poster_path ? (
-          <Link to={props.movie.homepage}>
+          <a href={props.movie.homepage} target="blank">
             <img
               src={`${import.meta.env.VITE_THE_MOVIE_DB_IMAGES_URL}${
                 props.movie.poster_path
               }`}
               alt={`${props.movie.title} film cover`}
             />
-          </Link>
+          </a>
         ) : (
           <>
             <FiCameraOff />
@@ -31,9 +30,9 @@ export function MovieCard(props: IMovieCardProps) {
 
       <div className="info-wrapper">
         <div>
-          <Link to={props.movie.homepage}>
+        <a href={props.movie.homepage} target="blank">
             <h4>{props.movie.title}</h4>
-          </Link>
+          </a>
           <p>{props.movie.overview}</p>
         </div>
 
