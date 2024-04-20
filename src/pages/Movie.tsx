@@ -13,7 +13,7 @@ import api from "../services/api";
 
 import * as Styles from "../styles/pages/Movie";
 
-//import { Loading } from "../components/Loading";
+import { Loading } from "../components/Loading";
 
 export function Movie() {
   const { id } = useParams();
@@ -57,7 +57,7 @@ export function Movie() {
   return (
     <Styles.Container>
       {isLoading ? (
-        <div className="loading-wrapper">Carregando...</div>
+        <Loading />
       ) : (
       <section id="presentation">
         <div className="movie-poster-wrapper">
