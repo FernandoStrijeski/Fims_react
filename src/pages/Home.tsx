@@ -4,6 +4,7 @@ import api from "../services/api";
 import { ITop10WeeklyMovies } from "../interfaces/Home";
 import { MovieCard } from "../components/MovieCard";
 import { Loading } from "../components/Loading";
+import { useWishList } from "../hooks/WishList";
 
 export function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,6 +12,9 @@ export function Home() {
   const [top10WeeklyMovies, setTop10WeeklyMovies] = useState<
     ITop10WeeklyMovies[]
   >([]);
+
+  const { handleAddOrRemoveMovieOnWishList, isMovieInWishList } =
+    useWishList();
 
   useEffect(() => {
     api
@@ -31,7 +35,7 @@ export function Home() {
   }, []);
 
   useEffect(() => {
-  //  console.log(top10WeeklyMovies);
+    //  console.log(top10WeeklyMovies);
   }, [top10WeeklyMovies]);
 
   return (
@@ -55,7 +59,13 @@ export function Home() {
             <Loading />
           ) : (
             top10WeeklyMovies.map((movie) => (
-              <MovieCard key={movie.id} movie={movie} className="card" />
+              <MovieCard
+                key={movie.id}
+                movie={movie}
+                className="card"
+                handleAddMovieOnWishList={handleAddOrRemoveMovieOnWishList}
+                inWishList={isMovieInWishList(movie.id)}
+              />
             ))
           )}
         </div>

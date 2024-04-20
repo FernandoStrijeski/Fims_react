@@ -1,13 +1,14 @@
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "./styles/globals";
 import { theme } from "./styles/theme";
 import { AppRoutes } from "./routes";
+import { AppProvider } from "./hooks";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
+    <ThemeProvider theme={theme}>      
+    <AppProvider>
       <AppRoutes />
+    </AppProvider>
     </ThemeProvider>
   );
 }

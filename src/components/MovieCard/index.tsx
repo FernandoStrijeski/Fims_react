@@ -45,7 +45,6 @@ export function MovieCard(props: IMovieCardProps) {
             <span>Quantidade de votos: </span>
             <strong>{props.movie.vote_count}</strong>
           </div>
-
           <div className="actions">
             <Button
               type="button"
