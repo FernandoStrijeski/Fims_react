@@ -103,7 +103,9 @@ export function Movie() {
               <p>
                 Avaliação geral: <span>{movie?.vote_average.toFixed(1)}</span>
               </p>
-
+              <p>
+                Quantidade de votos: <span>{movie?.vote_count}</span>
+              </p>
               <div className="actions">
                 <Button
                   variant={ButtonVariants.Secondary}

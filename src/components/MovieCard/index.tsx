@@ -42,6 +42,10 @@ export function MovieCard(props: IMovieCardProps) {
             <span>Avaliação geral: </span>
             <strong>{props.movie.vote_average.toFixed(1)}</strong>
           </div>
+          <div className="rating">
+            <span>Quantidade de votos: </span>
+            <strong>{props.movie.vote_count}</strong>
+          </div>
 
           <div className="actions">
             <Button
