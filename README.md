@@ -58,15 +58,15 @@ Após baixar o projeto, você pode abrir com o `VS Code`.
 # ⚙️**Configurações**
 Para execução dessa aplicação não necessário criar a base de dados, uma vez que para fins didáticos, utiliza o localstorage do navegador para gravar e editar as informações.
 
-Para utilizar esse projeto você precisa ter conta no site abaixo, que possui uma vasta gama de informações sobre diversos filmes:
-https://www.themoviedb.org/
+Para utilizar esse projeto você precisa ter conta no site abaixo, que possui uma vasta gama de informações sobre diversos filmes:<br>
+https://www.themoviedb.org/<br><br>
 
-Após isso, criar uma chave de uso para a API fornecida pelo site.
+Após isso, criar uma chave de uso para a API fornecida pelo site.<br><br>
 
-É necessário criar um arquivo .env na raiz do projeto para setar as variáveis abaixo:
-VITE_THE_MOVIE_DB_API_KEY={SUA_API_KEY}
-VITE_THE_MOVIE_DB_IMAGES_URL=https://image.tmdb.org/t/p/w500
-VITE_THE_MOVIE_DB_BASE_URL=https://api.themoviedb.org/3
+É necessário criar um arquivo .env na raiz do projeto para setar as variáveis abaixo:<br>
+VITE_THE_MOVIE_DB_API_KEY={SUA_API_KEY}<br>
+VITE_THE_MOVIE_DB_IMAGES_URL=https://image.tmdb.org/t/p/w500<br>
+VITE_THE_MOVIE_DB_BASE_URL=https://api.themoviedb.org/3<br><br>
 
 
 Pode ser necessário instalar as extensões abaixo:
