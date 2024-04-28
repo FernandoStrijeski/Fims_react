@@ -100,7 +100,7 @@ export const Container = styled.div`
       }
 
       footer {
-        margin: 1rem 0 1rem 0;
+        padding: 1rem 0 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
