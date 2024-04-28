@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
+import breakpoints from "./breakpoints";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -27,15 +28,15 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
   }
 
-  @media (max-width: 1080px) {
+  @media ${breakpoints.bg} {
     body, input, button {
       font-size: 93.75%;
     }
   }
 
-  @media (max-width: 720px) {
+  @media ${breakpoints.md} {
     body, input, button {
       font-size: 87.5%;
     }
   }
-`
+`;
