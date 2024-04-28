@@ -1,13 +1,22 @@
 import styled from "styled-components";
+import breakpoints from "../breakpoints";
 
 export const Container = styled.div`
-  margin-top: 70px;
+  margin-top: 90px;
   padding: 4rem 4.5rem 2rem;
 
-  #presentation {
+  @media ${breakpoints.md} {
+    padding: 2rem 1.5rem;
+  }
+
+  #presentation {    
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+
+    @media ${breakpoints.md} {
+      flex-direction: column;
+    }
 
     width: 100%;
     max-width: 1200px;
@@ -18,6 +27,16 @@ export const Container = styled.div`
       width: 100%;
       max-width: 190px;
       height: 290px;
+
+      @media ${breakpoints.md} {
+        align-self: center;
+      }
+      
+      @media ${breakpoints.md} {
+        width: 90%;
+        max-width: 390px;
+        height: auto;
+      }
 
       display: flex;
       flex-direction: column;
@@ -50,12 +69,18 @@ export const Container = styled.div`
 
       height: 100%;
 
-      margin-left: 2rem;
+      margin: 0 2rem 2rem 2rem;
+      @media ${breakpoints.md} {
+        margin: 0 0 2rem 0;
+      }
 
       > div {
         h1 {
           font-size: 2.5rem;
           font-weight: 700;
+          @media ${breakpoints.md} {
+            text-align: center;
+          }
         }
 
         h4 {
@@ -66,6 +91,7 @@ export const Container = styled.div`
 
         p {
           margin-top: 2rem;
+          text-align: justify;
         }
         a {
           text-decoration: none;
@@ -74,19 +100,24 @@ export const Container = styled.div`
       }
 
       footer {
+        margin: 1rem 0 1rem 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         width: 100%;
-
-        margin-bottom: 0.25rem;
 
         span {
           font-weight: 700;
         }
 
         .actions {
+          @media ${breakpoints.bg} {
+            margin-top: 1rem;
+            flex-wrap: wrap;
+          }
+
           display: flex;
           align-items: center;
           justify-content: center;
