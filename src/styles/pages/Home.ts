@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 import Filmz from "../../assets/films.png"
+import breakpoints from "../breakpoints"
 
 export const Container = styled.main`
   width: 100%;
@@ -50,8 +51,12 @@ export const Container = styled.main`
     }
   }
 
-  #movies {
+  #movies {    
     padding: 2rem 4.5rem;
+
+    @media ${breakpoints.sm} {
+      padding: 2rem 1.5rem;
+    }
 
     h3 {
       font-size: 2rem;

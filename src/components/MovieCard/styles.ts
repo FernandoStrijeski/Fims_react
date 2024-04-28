@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoints from "../../styles/breakpoints";
 
 export const Container = styled.div`
   display: flex;
@@ -7,8 +8,9 @@ export const Container = styled.div`
 
   background: ${({ theme }) => theme.colors.grey[700]};
 
-  height: 320px;
-  max-height: 400px;
+  @media ${breakpoints.md} {
+    flex-direction: column
+  }
 
   border-radius: 8px;
 
@@ -17,15 +19,24 @@ export const Container = styled.div`
     max-width: 190px;
     height: 290px;
 
+    @media ${breakpoints.md} {
+      width: 90%;
+      max-width: 390px;
+      height: auto;
+    }
+
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 15px;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      
 
       border-radius: 8px 0 0 8px;
     }
@@ -41,6 +52,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    text-align: justify;
 
     height: 100%;
     padding: 1rem;
@@ -55,13 +67,20 @@ export const Container = styled.div`
       color: white;
     }
     footer {
+      margin-top: 1rem;
       width: 100%;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
 
       .actions {
+        @media ${breakpoints.bg} {
+          margin-top: 1rem;
+          flex-wrap: wrap;
+        }
+
         display: flex;
         align-items: center;
         justify-content: center;

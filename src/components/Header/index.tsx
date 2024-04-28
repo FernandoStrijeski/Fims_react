@@ -1,10 +1,10 @@
-import { FaBars, FaHome, FaRegUser } from "react-icons/fa";
+import { FaBars, FaHome } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { Button } from "../Button";
 import * as Styles from "./styles";
 import { Link } from "../Link";
-import { ButtonVariants } from "../Button/types";
+//import { ButtonVariants } from "../Button/types";
 import { FormEvent, useState } from "react";
 import { useWishList } from "../../hooks/WishList";
 
@@ -42,13 +42,13 @@ export function Header() {
         </Link>
       </div>
 
-      <Button
+      {/* <Button
         type="button"
         variant={ButtonVariants.Tertiary}
         onClick={() => navigate("/login")}
       >
         <FaRegUser />
-      </Button>
+      </Button> */}
 
       <form className="search-wrapper" onSubmit={handleSubmit}>
         <input
